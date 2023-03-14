@@ -1,38 +1,130 @@
-.App {
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  background-color: azure;
+}
+
+#pomodoro-clock {
+  padding: 5px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+#break-label,
+#session-label {
+  font-size: 24px;
+  display: inline-block;
+  width: 120px;
+}
+
+#break-decrement,
+#session-decrement,
+#break-increment,
+#session-increment {
+  font-size: 22px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  margin: 0 5px 5px 5px;
+  vertical-align: middle;
+  background-color: #6b4d57;
+  color: #fff;
+  cursor: pointer;
+}
+
+#break-decrement:hover,
+#session-decrement:hover,
+#break-increment:hover,
+#session-increment:hover {
+  background-color: #8a6370;
+}
+
+#break-length,
+#session-length {
+  font-size: 24px;
+  display: inline-block;
+  width: 50px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#timer-label {
+  font-size: 36px;
+  margin-top: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#time-left {
+  font-size: 64px;
+  margin-top: 20px;
+}
+
+#start_stop,
+#reset {
+  font-size: 24px;
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  border: none;
+  background-color: #6b4d57;
+  color: #fff;
+  cursor: pointer;
+}
+
+#start_stop:hover,
+#reset:hover {
+  background-color: #8a6370;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+#break-length:disabled,
+#session-length:disabled {
+  color: #ccc;
+  cursor: default;
+}
+
+#beep {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  #break-label,
+  #session-label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  #break-decrement,
+  #session-decrement,
+  #break-increment,
+  #session-increment {
+    margin: 10px;
+  }
+
+  #break-length,
+  #session-length {
+    margin-bottom: 10px;
+  }
+
+  #start_stop,
+  #reset {
+    display: block;
+    margin: 10px auto;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.settings {
+  padding-top: 1%;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.setting-group {
+  padding-bottom: 1%;
 }
